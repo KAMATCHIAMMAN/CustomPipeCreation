@@ -1,0 +1,20 @@
+<div class="container">
+  <table id="student">
+    <tr>
+      <th>Name</th>
+      <th>Course</th>
+      <th>Marks</th>
+      <th>DOB</th>
+      <th>  Percentage</th>
+      <th>Gender</th>
+    </tr>
+    <tr *ngform="student details">
+      <td>{{std.name}}</td>
+      <td>{{std.course}}</td>
+      <td>{{std.marks}}</td>
+      <td>{{std.marks/totalmarks | percentage: totalmarks}}</td>
+      <td>{{std.DOB | data:'ful;Data' | uppercase}}</td>
+      <td>{{std.gender | lowercase}}</td>
+    </tr>
+    </table>
+</div>
